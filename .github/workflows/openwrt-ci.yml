@@ -61,7 +61,7 @@ jobs:
       - name: Generate configuration file
         run: |
           cd ${root_dir}
-          make defconfig
+          [ -e .config ] || make defconfig
 
       - name: Make download
         run: |
